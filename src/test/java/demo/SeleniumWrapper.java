@@ -43,6 +43,7 @@ public static void javaScroll(WebElement ele, WebDriver driver){
     try{
        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", ele); 
+        Thread.sleep(2000);
         
     }
     catch(Exception e){
