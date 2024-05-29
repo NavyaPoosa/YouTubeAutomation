@@ -93,7 +93,6 @@ public class TestCases {
                 .findElement_Youtube(By.xpath("//span[@title='The Wolf of Wall Street']/ancestor::a/span"), driver);
         softAssert.assertTrue(movie.getText().contains("Comedy") || movie.getText().contains("Animation"),
                 "Text is Neither 'Comedy' or 'Animation'");
-
         System.out.println("End Test case: Testcase02");
     }
 
@@ -145,7 +144,6 @@ public class TestCases {
         str = str.trim();
         int num = Integer.parseInt(str);
         softAssert.assertTrue((num <= 50), "The no.of tracks listed is less than or equal to 50");
-
         System.out.println("End Test case: Testcase03");
     }
 
@@ -202,10 +200,11 @@ public class TestCases {
                 totalLikes += likescount;
             }
             System.out.println("Sum of the likes of first 3 posts: " + totalLikes);
-            
         
         System.out.println("End Test case: Testcase04");
     }
+
+    
 
     @AfterClass
     public void endTest() {
