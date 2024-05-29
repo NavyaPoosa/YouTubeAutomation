@@ -1,6 +1,8 @@
 package demo;
 
 import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -51,4 +53,19 @@ public static void javaScroll(WebElement ele, WebDriver driver){
                 }
 
 }
+
+ public static List<WebElement> findElements_Youtube(By locator, WebDriver driver){
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+            List<WebElement> elements = driver.findElements(locator);
+            return elements;
+            
+        }
+        catch(Exception e){
+                System.out.println("Exception Occured!" + e. getMessage());
+                return null;
+                    }
+        
+    } 
 }
