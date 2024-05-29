@@ -16,10 +16,11 @@ Instructions to Integrate:
    Inside the demo folder, create a TestCases.java file. In this file we write all our testcases.
 3. Configure TestNG with test Task
    Create a folder under test, and parallel to the java folder, named “resources”.
-   Within the build.gradle file, configure the test task to use TestNG and specify the location of your testng.xml file. This is how you instruct Gradle to use TestNG for running tests instead of the default JUnit.
+   Within the build.gradle file, configure the test task to use TestNG and specify the location of your testng.xml file. This is how you instruct Gradle to use TestNG    for running tests instead of the default JUnit.
    Ensure the path to testng.xml is correct. You might need to adjust the path based on where your testng.xml file is located in your project structure.
 4. Creating the testng.xml File
-   Create a testng.xml file in the specified directory, typically under src/test/resources/ in a standard project structure. This XML file is where you define your test suites and specify which test classes or     
+   Create a testng.xml file in the specified directory, typically under src/test/resources/ in a standard project structure. This XML file is where you define your 
+   test suites and specify which test classes or     
    methods  to run
 5. Running the Tests
    With the dependency added and the testng.xml file configured, you can now run your TestNG tests through Gradle by executing the following command in your terminal or command prompt:  "./gradlew test"
